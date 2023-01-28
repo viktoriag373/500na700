@@ -42,6 +42,7 @@
 		&:last-child {
 			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		}
+		
 	}
 
 	&__question-wrap {
@@ -50,6 +51,9 @@
 	&__question-title {
 		font-size: 24px;
 		line-height: 146%;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	&__answer-wrap {

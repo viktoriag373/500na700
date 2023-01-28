@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// открытие подпунктов
-	$('.menu__link').click(function () {
+	$('.menu__link').on('click', function () {
 		$(this).siblings(".menu__submenu").toggleClass('_active');
 	})
 

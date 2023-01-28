@@ -1,4 +1,7 @@
 .news {
+	@media (max-width: 576px) {
+		padding-bottom: 80px;
+	}
 	&__title {
 		margin-bottom: 30px;
 	}
