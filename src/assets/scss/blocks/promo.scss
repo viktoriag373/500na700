@@ -1,0 +1,163 @@
+.promo {
+	@media (max-width: 768px) {
+		padding: 0 15px;
+		padding-top: 30px;
+	}
+	&__slider {
+		margin-bottom: 55px;
+	}
+
+	&__slide {
+		width: calc(100vw - 100px);
+		max-width: 1240px;
+	}
+
+	&__wrap-slide {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__slide-img {
+		display: block;
+		width: 100%;
+		border-radius: 6px;
+		@media (max-width: 576px) {
+			display: none;
+		}
+
+		&_mobile {
+			display: none;
+			@media (max-width: 576px) {
+				display: block;
+			}
+		}
+	}
+
+	&__slide-content {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		// padding-top: 406px;
+		padding-bottom: 150px;
+		padding-left: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		// background: rgba(0, 0, 0, 0.364);
+
+		@media (max-width: 950px) {
+			padding-bottom: 50px;
+		}
+		@media (max-width: 576px) {
+			padding-left: 20px;
+			padding-bottom: 40px;
+			justify-content: flex-start;
+			padding-top: 230px;
+		}
+	}
+
+	&__slide-title {
+		display: block;
+		font-weight: 500;
+		font-size: 80px;
+		line-height: 106%;
+		letter-spacing: -0.03em;
+		margin-bottom: 20px;
+		@media (max-width: 576px) {
+			font-size: 40px;
+		}
+	}
+
+	&__slide-description {
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: 0.01em;
+		max-width: 524px;
+		@media (max-width: 576px) {
+			max-width: 90%;
+		}
+	}
+
+	&__slider-navigation {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: max-content;
+		display: flex;
+		align-items: center;
+	}
+	&__slider-button {
+		padding: 15px;
+		cursor: pointer;
+
+		&:hover {
+			.navigation-button,
+			.navigation-button::after,
+			.navigation-button::before {
+				background: $hoverColor;
+			}
+		}
+	}
+
+	&__slider-button-prev {
+		margin-right: 2px;
+	}
+
+	&__slider-button-next {
+	}
+}
+.navigation-button {
+	display: block;
+	width: 100px;
+	height: 3px;
+	background: $lightColor;
+	position: relative;
+	transition: background 0.3s;
+}
+.navigation-button-prev {
+	&::after {
+		content: "";
+		position: absolute;
+		width: 13px;
+		height: 2px;
+		top: -4px;
+		left: -4px;
+		background: $lightColor;
+		transform: rotate(-45deg);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 13px;
+		height: 2px;
+		top: 4px;
+		left: -4px;
+		background: $lightColor;
+
+		transform: rotate(45deg);
+	}
+}
+
+.navigation-button-next {
+	&::after {
+		content: "";
+		position: absolute;
+		width: 13px;
+		height: 2px;
+		top: -4px;
+		right: -4px;
+		background: $lightColor;
+		transform: rotate(45deg);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 13px;
+		height: 2px;
+		top: 4px;
+		right: -4px;
+		background: $lightColor;
+
+		transform: rotate(-45deg);
+	}
+}
